@@ -20,7 +20,7 @@ document.getElementById('memberApplicationForm').addEventListener('submit', asyn
     
     try {
         // Send to Netlify Forms
-        const response = await fetch('/', {
+        const response = await fetch('https://usebasin.com/f/63dce37f6273', {
             method: 'POST',
             body: formData
         });
