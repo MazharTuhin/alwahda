@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Hind Siliguri', 'Arial Unicode MS', sans-serif;
+}
+
+.glass-effect {
+    background: rgba(5, 34, 52, 0.85);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(219, 166, 86, 0.3);
+    box-shadow: 0 8px 32px rgba(5, 34, 52, 0.3);
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #052234 0%, #0a3a56 35%, #1a4a6a 65%, #2a5a7a 100%);
+}
+
+.input-focus:focus {
+    border-color: #dba656;
+    box-shadow: 0 0 0 3px rgba(219, 166, 86, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #dba656, #f4c470);
+    color: #052234;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #c8943d, #dba656);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(219, 166, 86, 0.4);
+}
+
+.text-brand-gold {
+    color: #dba656;
+}
+
+.border-brand-gold {
+    border-color: #dba656;
+}

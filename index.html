@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Wahda Investment Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#dba656',
+                        'brand-secondary': '#052234'
+                    },
+                    fontFamily: {
+                        'hind': ['Hind Siliguri', 'Arial Unicode MS', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient-bg min-h-screen py-8">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <!-- Header -->
+        <div class="glass-effect rounded-3xl p-10 mb-8 text-center">
+            <!-- <div class="inline-flex items-center justify-center w-24 h-24 bg-brand-primary rounded-full mb-6">
+                <img class="w-full rounded-full" src="https://i.postimg.cc/N0DhkcLc/Al-Wahda-2.png" alt="Al-Wahda">
+            </div> -->
+            <h1 class="text-4xl font-bold mb-4 text-brand-gold">আল-ওয়াহদা ইনভেস্টমেন্ট গ্রুপ - সদস্য আবেদন ফরম</h1>
+            <p class="text-lg text-gray-200">প্রবাসী সদস্যদের জন্য বিশেষ আবেদন</p>
+            <div class="mt-6 h-1 w-24 bg-brand-primary rounded-full mx-auto"></div>
+        </div>
+
+        <!-- Form -->
+        <form id="memberApplicationForm" class="glass-effect rounded-3xl p-10">
+            <!-- Personal Information Section -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold mb-8 text-brand-gold border-b-2 border-brand-primary pb-3 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                    </svg>
+                    ব্যক্তিগত তথ্য
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Full Name Bengali -->
+					<div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">পূর্ণ নাম (বাংলায়) *</label>
+                        <input type="text" name="fullNameBn" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    <!-- FullName English -->
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">Full Name (English) *</label>
+                        <input type="text" name="fullNameEn" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    <!-- Fathers Name -->
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">পিতার নাম *</label>
+                        <input type="text" name="fatherName" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    <!-- Mothers Name -->
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">মাতার নাম *</label>
+                        <input type="text" name="motherName" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    <!-- Birthday -->
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">জন্ম তারিখ *</label>
+                        <input type="date" name="dateOfBirth" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    <!-- NID Number -->
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">জাতীয় পরিচয়পত্র নম্বর *</label>
+                        <input type="text" name="nidNumber" placeholder="জাতীয় পরিচয়পত্র না থাকলে ‘নাই’ লিখুন" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    <!-- Passport Number -->
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">পাসপোর্ট নম্বর *</label>
+                        <input type="text" name="passportNumber" required 
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Upload Section -->
+            <div class="mb-10">
+				<h2 class="text-2xl font-semibold mb-8 text-brand-gold border-b-2 border-brand-primary pb-3 flex items-center">
+					<svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+					</svg>
+					ছবি সংযুক্তি
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<!-- Passport Size Photo -->
+					<div class="max-w-xs mx-auto">
+						<div>
+							<label class="block text-sm font-medium mb-3 text-gray-200">পাসপোর্ট সাইজ ছবি *</label>
+							<div class="relative">
+								<input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required 
+									class="hidden">
+								<label for="profilePhoto" 
+									class="flex flex-col items-center justify-center w-full h-56 border-2 border-dashed border-brand-primary/50 rounded-2xl cursor-pointer hover:bg-brand-primary/10 hover:border-brand-primary transition-all duration-300 p-8">
+									<div id="profilePhotoPreview" class="hidden w-full h-full rounded-2xl overflow-hidden">
+										<img id="profilePhotoImg" class="w-full h-full object-cover">
+									</div>
+									<div id="profilePhotoPlaceholder" class="flex flex-col items-center justify-center text-center">
+										<div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-4">
+											<svg class="w-8 h-8 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+											</svg>
+										</div>
+										<p class="text-brand-gold font-medium mb-2">পাসপোর্ট সাইজ ছবি আপলোড করুন</p>
+										<p class="text-gray-400 text-sm">JPG, PNG - সর্বোচ্চ ২ MB</p>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!-- Signature -->
+					 <div class="max-w-xs mx-auto">
+						<div>
+							<label class="block text-sm font-medium mb-3 text-gray-200">সিগনেচারের ছবি *</label>
+							<div class="relative">
+								<input type="file" id="signaturePhoto" name="signaturePhoto" accept="image/*" required 
+									class="hidden">
+								<label for="signaturePhoto" 
+									class="flex flex-col items-center justify-center w-full h-56 border-2 border-dashed border-brand-primary/50 rounded-2xl cursor-pointer hover:bg-brand-primary/10 hover:border-brand-primary transition-all duration-300 p-8">
+									<div id="signaturePhotoPreview" class="hidden w-full h-full rounded-2xl overflow-hidden">
+										<img id="signaturePhotoImg" class="w-full h-full object-cover">
+									</div>
+									<div id="signaturePhotoPlaceholder" class="flex flex-col items-center justify-center text-center">
+										<div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-4">
+											<svg class="w-8 h-8 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+											</svg>
+										</div>
+										<p class="text-brand-gold font-medium mb-2">সিগনেচারের ছবি আপলোড করুন</p>
+										<p class="text-gray-400 text-sm">JPG, PNG - সর্বোচ্চ 150 KB</p>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- Contact Information Section -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold mb-8 text-brand-gold border-b-2 border-brand-primary pb-3 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    যোগাযোগের তথ্য
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">মোবাইল নম্বর (বাংলাদেশ) *</label>
+                        <input type="tel" name="phoneBd" required placeholder="+880XXXXXXXXX"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">মোবাইল নম্বর (বর্তমান দেশ) *</label>
+                        <input type="tel" name="phoneAbroad" required placeholder="বর্তমান দেশের নম্বর"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium mb-3 text-gray-200">ইমেইল ঠিকানা *</label>
+                        <input type="email" name="email" required placeholder="example@email.com"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium mb-3 text-gray-200">বাংলাদেশের স্থায়ী ঠিকানা *</label>
+                        <textarea name="permanentAddress" required rows="3" placeholder="পাড়া/মহল্লা, গ্রাম, ইউনিয়ন, উপজেলা, জেলা"
+                                  class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300 resize-none"></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium mb-3 text-gray-200">বর্তমান ঠিকানা (প্রবাসে) *</label>
+                        <textarea name="currentAddress" required rows="3" placeholder="সম্পূর্ণ ঠিকানা"
+                                  class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300 resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Information Section -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold mb-8 text-brand-gold border-b-2 border-brand-primary pb-3 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6"/>
+                    </svg>
+                    পেশাগত তথ্য
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">বর্তমান পেশা *</label>
+                        <input type="text" name="currentProfession" required placeholder="প্রবাসে যা করেন"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">কোম্পানি/প্রতিষ্ঠানের নাম</label>
+                        <input type="text" name="companyName" placeholder="প্রতিষ্ঠানের নাম"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">মাসিক আয় (আনুমানিক)</label>
+                        <input type="text" name="monthlyIncome" placeholder="যেমন: ৫০,০০০ টাকা"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium mb-3 text-gray-200">শিক্ষাগত যোগ্যতা *</label>
+                        <textarea name="education" required rows="3" placeholder="সর্বোচ্চ ডিগ্রি, প্রতিষ্ঠান, পাশের সাল"
+                                  class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300 resize-none"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Interest Section -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold mb-8 text-brand-gold border-b-2 border-brand-primary pb-3 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    ব্যবসায়িক আগ্রহ
+                </h2>
+                
+                <div class="grid grid-cols-1 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">কোন ধরনের ব্যবসায় আগ্রহী? *</label>
+                        <select name="businessInterest" required 
+                                class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white input-focus transition-all duration-300">
+                            <option value="">নির্বাচন করুন</option>
+                            <option value="আমদানি-রপ্তানি">আমদানি-রপ্তানি</option>
+                            <option value="রিয়েল এস্টেট">রিয়েল এস্টেট</option>
+                            <option value="ট্রেডিং">ট্রেডিং</option>
+                            <option value="ম্যানুফ্যাকচারিং">ম্যানুফ্যাকচারিং</option>
+                            <option value="সার্ভিস">সার্ভিস</option>
+                            <option value="টেকনোলজি">টেকনোলজি</option>
+                            <option value="অন্যান্য">অন্যান্য</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">কতটি শেয়ার নিতে চান?</label>
+                        <select name="shareNumber" 
+                                class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white input-focus transition-all duration-300">
+                            <option value="">নির্বাচন করুন</option>
+                            <option value="1">১টি</option>
+                            <option value="2">২টি</option>
+                            <option value="3">৩টি</option>
+                            <option value="4">৪টি</option>
+                            <option value="5">৫টি</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nominee Section -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold mb-8 text-brand-gold border-b-2 border-brand-primary pb-3 flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    নমিনি
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">নমিনির নাম</label>
+                        <input type="text" name="nomineeName" placeholder="রেফারেন্সের পূর্ণ নাম"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">জাতীয় পরিচয়পত্র নং</label>
+                        <input type="number" name="nomineeNID"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+
+					<div>
+                        <label class="block text-sm font-medium mb-3 text-gray-200">নমিনির মোবাইল নম্বর</label>
+                        <input type="tel" name="nomineePhone"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium mb-3 text-gray-200">নমিনির সাথে সম্পর্ক</label>
+                        <input type="text" name="nomineeRelation" placeholder="যেমন: পিতা, মাতা, স্ত্রী, ভাই, বোন"
+                               class="w-full px-5 py-4 rounded-xl bg-brand-secondary/20 border-2 border-gray-600 text-white placeholder-gray-400 input-focus transition-all duration-300">
+                    </div>
+                </div>
+				<p class="text-gray-300 mt-2 text-sm"><strong>বি.দ্র.: </strong>উপরোক্ত নমিনি কেবল শেয়ারধারীর মৃত্যুর পর কোম্পানির নিকট প্রাপ্য অর্থ উত্তোলন করতে পারবে এবং ইসলামী শরিয়াহ অনুযায়ী শেয়ারধারীর ওয়ারিশগনের মাঝে বণ্টন করবেন।</p>
+            </div>
+
+            <!-- Declaration -->
+            <div class="mb-10">
+                <div class="bg-brand-secondary/30 rounded-2xl p-8 border border-brand-primary/30">
+                    <h3 class="text-xl font-semibold mb-6 text-brand-gold flex items-center">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        ঘোষণা
+                    </h3>
+                    <div class="flex items-start space-x-4">
+                        <input type="checkbox" id="declaration" name="declaration" required 
+                               class="mt-1 h-5 w-5 text-brand-primary bg-brand-secondary border-2 border-brand-primary rounded focus:ring-brand-primary focus:ring-2">
+                        <label for="declaration" class="text-sm text-gray-200 leading-relaxed">
+                            আমি এতদ্বারা ঘোষণা করছি যে, উপরে প্রদত্ত সকল তথ্য সত্য এবং সঠিক। কোন তথ্য মিথ্যা প্রমাণিত হলে আমার সদস্যপদ বাতিল হতে পারে। আমি গ্রুপের নিয়ম-কানুন মেনে চলতে সম্মত।
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" 
+                        class="btn-primary py-5 px-12 rounded-2xl text-lg font-bold shadow-xl hover:shadow-2xl transform transition-all duration-300 inline-flex items-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    আবেদন জমা দিন
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="hidden glass-effect rounded-3xl p-10 mt-8 text-center">
+            <div class="text-6xl mb-6">✅</div>
+            <h2 class="text-3xl font-bold mb-6 text-brand-gold">আবেদন সফলভাবে জমা হয়েছে!</h2>
+            <p class="text-xl text-gray-200">আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব। ধন্যবাদ!</p>
+            <div class="mt-8 h-1 w-32 bg-brand-primary rounded-full mx-auto"></div>
+        </div>
+	</div>
+
+    <script src="script.js"></script>
+
+    <!-- Netlify Forms Detection -->
+    <form name="member-application" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+        <input type="text" name="bot-field" />
+        <input type="text" name="fullNameBn" />
+        <input type="text" name="fullNameEn" />
+        <input type="text" name="fatherName" />
+        <input type="text" name="motherName" />
+        <input type="date" name="dateOfBirth" />
+        <input type="text" name="nidNumber" />
+        <input type="text" name="passportNumber" />
+        <input type="file" name="profilePhoto" />
+        <input type="file" name="signaturePhoto" />
+        <input type="tel" name="phoneBd" />
+        <input type="tel" name="phoneAbroad" />
+        <input type="email" name="email" />
+        <textarea name="permanentAddress"></textarea>
+        <textarea name="currentAddress"></textarea>
+        <input type="text" name="currentProfession" />
+        <input type="text" name="companyName" />
+        <input type="text" name="monthlyIncome" />
+        <textarea name="education"></textarea>
+        <select name="businessInterest"></select>
+        <select name="shareNumber"></select>
+        <input type="text" name="nomineeName" />
+        <input type="text" name="nomineeNID" />
+        <input type="tel" name="nomineePhone" />
+        <input type="text" name="nomineeRelation" />
+        <input type="checkbox" name="declaration" />
+        <input type="text" name="submissionTime" />
+    </form>
+</body>
+</html>
