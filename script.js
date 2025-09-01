@@ -178,9 +178,9 @@ function handleSignaturePhotoUpload() {
     signatureInput.addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (file) {
-            // Validate file size (150 KB max)
-            if (file.size > 150 * 1024) {
-                alert('ফাইল সাইজ খুব বড়! সর্বোচ্চ 150 KB হতে পারে।');
+            // Validate file size (500 KB max)
+            if (file.size > 500 * 1024) {
+                alert('ফাইল সাইজ খুব বড়! সর্বোচ্চ 500 KB হতে পারে।');
                 signatureInput.value = '';
                 return;
             }
