@@ -84,10 +84,8 @@ document.getElementById('memberApplicationForm').addEventListener('submit', asyn
 - মাসিক আয়: ${data.monthlyIncome || 'N/A'}
 - শিক্ষা: ${data.education || 'N/A'}
 
-ব্যবসায়িক আগ্রহ:
-- আগ্রহের ক্ষেত্র: ${data.businessInterest || 'N/A'}
-- বিনিয়োগ ক্ষমতা: ${data.shareNumber || 'N/A'}
-- যোগদানের কারণ: ${data.reasonToJoin || 'N/A'}
+শেয়ার সংখ্যা:
+- শেয়ার সংখ্যা: ${data.shareNumber || 'N/A'}
 
 নমিনি:
 - নাম: ${data.nomineeName || 'N/A'}
